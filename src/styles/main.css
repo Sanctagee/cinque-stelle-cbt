@@ -241,6 +241,7 @@ body {
   margin-right: auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  background: url(/src/images/cinque-hero.jpg);
   gap: 3rem;
   align-items: center;
 

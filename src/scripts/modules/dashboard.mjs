@@ -152,6 +152,7 @@ export class Dashboard {
     }
 
     // ADD THIS NEW METHOD FOR MOTIVATIONAL QUOTES
+    // In dashboard.mjs - update the loadMotivationalQuote method
     async loadMotivationalQuote() {
         try {
             console.log('Fetching motivational quote...');
@@ -166,11 +167,32 @@ export class Dashboard {
             
         } catch (error) {
             console.log('Quote service not available, using fallback:', error);
-            // Fallback quotes
-            this.displayMotivationalQuote({
-                content: "Education is the most powerful weapon which you can use to change the world.",
-                author: "Nelson Mandela"
-            });
+            // Multiple fallback quotes - randomly select one
+            const fallbackQuotes = [
+                {
+                    content: "Education is the most powerful weapon which you can use to change the world.",
+                    author: "Nelson Mandela"
+                },
+                {
+                    content: "The beautiful thing about learning is that no one can take it away from you.",
+                    author: "B.B. King"
+                },
+                {
+                    content: "Success is not final, failure is not fatal: it is the courage to continue that counts.",
+                    author: "Winston Churchill"
+                },
+                {
+                    content: "The expert in anything was once a beginner.",
+                    author: "Helen Hayes"
+                },
+                {
+                    content: "Don't let what you cannot do interfere with what you can do.",
+                    author: "John Wooden"
+                }
+            ];
+            
+            const randomQuote = fallbackQuotes[Math.floor(Math.random() * fallbackQuotes.length)];
+            this.displayMotivationalQuote(randomQuote);
         }
     }
 
