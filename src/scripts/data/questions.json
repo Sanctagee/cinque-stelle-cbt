@@ -1,0 +1,122 @@
+{
+  "exams": [
+    {
+      "id": "waec-math-2024",
+      "title": "WAEC Mathematics 2024",
+      "questions": [
+        {
+          "id": 1,
+          "question": "If 2x + 3 = 15, what is the value of x?",
+          "options": ["4", "5", "6", "7"],
+          "correctAnswer": 2,
+          "explanation": "2x + 3 = 15 → 2x = 12 → x = 6",
+          "difficulty": "easy",
+          "topic": "Algebra"
+        },
+        {
+          "id": 2,
+          "question": "What is the area of a circle with radius 7cm? (Take π = 22/7)",
+          "options": ["44 cm²", "88 cm²", "154 cm²", "308 cm²"],
+          "correctAnswer": 2,
+          "explanation": "Area = πr² = (22/7) × 7 × 7 = 154 cm²",
+          "difficulty": "medium",
+          "topic": "Geometry"
+        },
+        {
+          "id": 3,
+          "question": "Solve: 5y – 10 = 0",
+          "options": ["y = 0", "y = 2", "y = –2", "y = 10"],
+          "correctAnswer": 1,
+          "explanation": "5y = 10 → y = 2",
+          "difficulty": "easy",
+          "topic": "Algebra"
+        }
+      ]
+    },
+    {
+      "id": "jamb-math-2024",
+      "title": "JAMB Mathematics 2024",
+      "questions": [
+        {
+          "id": 1,
+          "question": "Simplify: 2³ × 3²",
+          "options": ["12", "24", "36", "72"],
+          "correctAnswer": 3,
+          "explanation": "2³ = 8, 3² = 9, 8 × 9 = 72",
+          "difficulty": "easy",
+          "topic": "Arithmetic"
+        },
+        {
+          "id": 2,
+          "question": "Find the value of log₁₀(1000)",
+          "options": ["1", "2", "3", "4"],
+          "correctAnswer": 2,
+          "explanation": "log₁₀(1000) = 3 because 10³ = 1000",
+          "difficulty": "easy",
+          "topic": "Logarithms"
+        },
+        {
+          "id": 3,
+          "question": "Solve: If y = 3x and x = 4, find y.",
+          "options": ["7", "10", "12", "16"],
+          "correctAnswer": 2,
+          "explanation": "y = 3(4) = 12",
+          "difficulty": "easy",
+          "topic": "Algebra"
+        }
+      ]
+    },
+    {
+      "id": "jamb-english-1978",
+      "title": "JAMB Use of English 1978",
+      "description": "Original JAMB Use of English past questions from 1978",
+      "examType": "jamb",
+      "subject": "english",
+      "difficulty": "intermediate",
+      "duration": 60,
+      "questionCount": 100,
+      "popularity": 95,
+      "questions": [
+        {
+          "id": 1,
+          "question": "The author observes that",
+          "options": [
+            "war, pestilence and famine were caused by the extravagance of nature",
+            "Nature was heartless and senseless",
+            "there was a time when uncontrolled birth made sense",
+            "It was wise at a time when mankind did not interfere with normal reproduction",
+            "nature was heartless in its reproductive process"
+          ],
+          "correctAnswer": 2,
+          "explanation": "The passage suggests uncontrolled birth made sense when nature decimated the population.",
+          "passage": "PASSAGE A",
+          "difficulty": "medium"
+        },
+        {
+          "id": 2,
+          "question": "Which of these statements does not express the opinion of the author?",
+          "options": [
+            "Mankind has started to interfere with the work of nature",
+            "Many people had died in the past through want and disease",
+            "Mankind should not have the maximum number of children possible",
+            "Mankind should take care of its children",
+            "Man's present relationship with nature in matters of birth and death is a happy one."
+          ],
+          "correctAnswer": 4,
+          "explanation": "The author implies the relationship is problematic.",
+          "passage": "PASSAGE A",
+          "difficulty": "hard"
+        },
+        {
+          "id": 3,
+          "question": "In the passage, the word ‘extravagance’ means:",
+          "options": ["wastefulness", "intelligence", "kindness", "provision", "carelessness"],
+          "correctAnswer": 0,
+          "explanation": "Extravagance means wastefulness.",
+          "passage": "PASSAGE A",
+          "difficulty": "medium"
+        }
+      ]
+    }
+  ]
+}

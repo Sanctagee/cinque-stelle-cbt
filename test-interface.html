@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam Session - Cinque Stelle CBT</title>
+    <link rel="stylesheet" href="./src/styles/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-brand">
+                <span class="logo">5★</span>
+                <span class="brand-name">Cinque Stelle CBT</span>
+            </div>
+            <div class="exam-timer" id="exam-timer">
+                <span>Time Left: </span>
+                <span id="timer-display">60:00</span>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main test-interface">
+        <div class="test-container">
+            <div class="test-header">
+                <h1 id="exam-title">JAMB Use of English 1978</h1>
+                <div class="progress-info">
+                    <span id="question-counter">Question 1 of 100</span>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progress-fill"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="test-content">
+                <div class="question-section">
+                    <div class="question-card" id="question-card">
+                        <div class="question-text" id="question-text">
+                            Loading question...
+                        </div>
+                        
+                        <div class="options-container" id="options-container">
+                            <!-- Options will be dynamically populated -->
+                        </div>
+                        
+                        <div class="question-navigation">
+                            <button class="btn btn-outline" id="prev-btn" disabled>
+                                ← Previous
+                            </button>
+                            <button class="btn btn-primary" id="next-btn">
+                                Next →
+                            </button>
+                            <button class="btn btn-secondary" id="submit-btn" style="display: none;">
+                                Submit Exam
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="sidebar">
+                    <div class="question-palette">
+                        <h3>Questions</h3>
+                        <div class="palette-grid" id="palette-grid">
+                            <!-- Question numbers will be dynamically populated -->
+                        </div>
+                    </div>
+                    
+                    <div class="exam-info">
+                        <h3>Exam Info</h3>
+                        <div class="info-item">
+                            <span>Total Questions:</span>
+                            <span id="total-questions">100</span>
+                        </div>
+                        <div class="info-item">
+                            <span>Time Allowed:</span>
+                            <span id="time-allowed">60 minutes</span>
+                        </div>
+                        <div class="info-item">
+                            <span>Answered:</span>
+                            <span id="answered-count">0</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Results Modal -->
+    <div id="results-modal" class="modal hidden">
+        <div class="modal-content results-content">
+            <h2>Exam Results</h2>
+            <div class="results-summary">
+                <div class="result-stat">
+                    <span class="stat-value" id="score-percentage">0%</span>
+                    <span class="stat-label">Overall Score</span>
+                </div>
+                <div class="result-stat">
+                    <span class="stat-value" id="correct-answers">0</span>
+                    <span class="stat-label">Correct Answers</span>
+                </div>
+                <div class="result-stat">
+                    <span class="stat-value" id="time-spent">0:00</span>
+                    <span class="stat-label">Time Spent</span>
+                </div>
+            </div>
+            <div class="results-actions">
+                <button class="btn btn-primary" id="review-answers">
+                    Review Answers
+                </button>
+                <button class="btn btn-outline" id="back-to-exams">
+                    Back to Exams
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="./src/scripts/main.mjs"></script>
+    <script type="module" src="./src/scripts/modules/testEngine.mjs"></script>
+</body>
+</html>

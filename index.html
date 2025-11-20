@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Cinque Stelle CBT - Five-Star Test Preparation Platform for Nigerian Students. Practice WAEC, JAMB, NECO exams with advanced analytics and personalized study plans">
+    <meta name="author" content="Gabriel Chikwendu Nwofoke">
+    <meta name="keywords" content="CBT, WAEC, JAMB, NECO, test preparation, Nigerian exams">
+    <title>Cinque Stelle CBT - Premium Test Preparation</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+
+    <!-- Open Graph meta tags -->
+    <meta property="og:title" content="Cinque Stelle CBT - Five-Star Test Preparation">
+    <meta property="og:description" content="Premium test preparation platform for WAEC, JAMB, and NECO exams with advanced analytics and personalized study recommendations.">
+    <meta property="og:image" content="https://sanctagee.github.io/cinque-stelle-cbt/images/logo2.png">
+    <meta property="og:url" content="https://sanctagee.github.io/cinque-stelle-cbt/index.html">
+    <meta property="og:type" content="website">
+    <link rel="stylesheet" href="./src/styles/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-brand">
+                <span class="logo">5★</span>
+                <span class="brand-name">Cinque Stelle CBT</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="exams.html">Exams</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="#" id="auth-link">Login</a></li>
+            </ul>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <main class="main">
+        <section class="hero">
+            <div class="hero-content">
+                <h1 class="hero-title">Five-Star Test Preparation</h1>
+                <p class="hero-subtitle">Master JAMB, WAEC, and NECO exams with intelligent practice tests and personalized feedback</p>
+                <div class="hero-actions">
+                    <button class="btn btn-primary" id="get-started">Get Started</button>
+                    <button class="btn btn-secondary" id="learn-more">Learn More</button>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="floating-cards">
+                    <div class="card" data-animation="float-1">
+                        <span>JAMB</span>
+                    </div>
+                    <div class="card" data-animation="float-2">
+                        <span>WAEC</span>
+                    </div>
+                    <div class="card" data-animation="float-3">
+                        <span>NECO</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Login Modal -->
+        <div id="login-modal" class="modal hidden">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h2>Student Login</h2>
+                <form id="login-form" class="auth-form">
+                    <div class="form-group">
+                        <label for="username">Username</label>
+                        <input type="text" id="username" name="username" required 
+                               pattern="[A-Za-z0-9]{3,20}"
+                               title="Username must be 3-20 characters (letters and numbers only)">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" required
+                               minlength="6"
+                               title="Password must be at least 6 characters">
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Login</button>
+                </form>
+                <p class="auth-switch">Don't have an account? <a href="#" id="show-register">Register here</a></p>
+            </div>
+        </div>
+
+        <!-- Registration Modal -->
+        <div id="register-modal" class="modal hidden">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h2>Create Account</h2>
+                <form id="register-form" class="auth-form">
+                    <div class="form-group">
+                        <label for="reg-username">Username</label>
+                        <input type="text" id="reg-username" name="reg-username" required 
+                               pattern="[A-Za-z0-9]{3,20}"
+                               title="Username must be 3-20 characters (letters and numbers only)">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="reg-password">Password</label>
+                        <input type="password" id="reg-password" name="reg-password" required
+                               minlength="6"
+                               title="Password must be at least 6 characters">
+                    </div>
+                    <div class="form-group">
+                        <label for="confirm-password">Confirm Password</label>
+                        <input type="password" id="confirm-password" name="confirm-password" required
+                               minlength="6">
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Create Account</button>
+                </form>
+                <p class="auth-switch">Already have an account? <a href="#" id="show-login">Login here</a></p>
+            </div>
+        </div>
+    </main>
+
+    <script type="module" src="./src/scripts/main.mjs"></script>
+</body>
+</html>

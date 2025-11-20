@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Cinque Stelle CBT - Five-Star Test Preparation Platform for Nigerian Students. Practice WAEC, JAMB, NECO exams with advanced analytics and personalized study plans">
+    <meta name="author" content="Gabriel Chikwendu Nwofoke">
+    <meta name="keywords" content="CBT, WAEC, JAMB, NECO, test preparation, Nigerian exams">
+    <title>Cinque Stelle CBT - Premium Test Preparation</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+
+    <!-- Open Graph meta tags -->
+    <meta property="og:title" content="Cinque Stelle CBT - Five-Star Test Preparation">
+    <meta property="og:description" content="Premium test preparation platform for WAEC, JAMB, and NECO exams with advanced analytics and personalized study recommendations.">
+    <meta property="og:image" content="https://sanctagee.github.io/cinque-stelle-cbt/images/logo2.png">
+    <meta property="og:url" content="https://sanctagee.github.io/cinque-stelle-cbt/index.html">
+    <meta property="og:type" content="website">
+    <link rel="stylesheet" href="./src/styles/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-brand">
+                <span class="logo">5★</span>
+                <span class="brand-name">Cinque Stelle CBT</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="exams.html" class="active">Exams</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="#" id="auth-link">Login</a></li>
+            </ul>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <main class="main exams-main">
+        <div class="exams-container">
+            <section class="exams-header">
+                <h1>Practice Tests</h1>
+                <p>Select from our comprehensive collection of past questions</p>
+                
+                <div class="exams-controls">
+                    <div class="search-box">
+                        <input type="text" id="exam-search" placeholder="Search exams..." 
+                               aria-label="Search exams">
+                        <span class="search-icon">🔍</span>
+                    </div>
+                    
+                    <div class="filter-buttons">
+                        <button class="filter-btn active" data-filter="all">All</button>
+                        <button class="filter-btn" data-filter="jamb">JAMB</button>
+                        <button class="filter-btn" data-filter="waec">WAEC</button>
+                        <button class="filter-btn" data-filter="neco">NECO</button>
+                        <button class="filter-btn" data-filter="mathematics">Mathematics</button>
+                        <button class="filter-btn" data-filter="english">English</button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="exams-grid" id="exams-grid">
+                <!-- Exams will be dynamically loaded here -->
+                <div class="loading">Loading practice tests...</div>
+            </section>
+        </div>
+    </main>
+
+    <script type="module" src="./src/scripts/main.mjs"></script>
+    <script type="module" src="./src/scripts/modules/examEngine.mjs"></script>
+</body>
+</html>

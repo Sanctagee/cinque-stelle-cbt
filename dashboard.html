@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Cinque Stelle CBT - Five-Star Test Preparation Platform for Nigerian Students. Practice WAEC, JAMB, NECO exams with advanced analytics and personalized study plans">
+    <meta name="author" content="Gabriel Chikwendu Nwofoke">
+    <meta name="keywords" content="CBT, WAEC, JAMB, NECO, test preparation, Nigerian exams">
+    <title>Cinque Stelle CBT - Students Dashboard</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+
+    <!-- Open Graph meta tags -->
+    <meta property="og:title" content="Cinque Stelle CBT - Five-Star Test Preparation">
+    <meta property="og:description" content="Premium test preparation platform for WAEC, JAMB, and NECO exams with advanced analytics and personalized study recommendations.">
+    <meta property="og:image" content="https://sanctagee.github.io/cinque-stelle-cbt/images/logo2.png">
+    <meta property="og:url" content="https://sanctagee.github.io/cinque-stelle-cbt/index.html">
+    <meta property="og:type" content="website">
+    <link rel="stylesheet" href="./src/styles/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-brand">
+                <span class="logo">5★</span>
+                <span class="brand-name">Cinque Stelle CBT</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="exams.html">Exams</a></li>
+                <li><a href="dashboard.html" class="active">Dashboard</a></li>
+                <li><a href="#" id="auth-link">Login</a></li>
+            </ul>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <main class="main dashboard-main">
+        <div class="dashboard-container">
+            <section class="dashboard-header">
+                <h1>Welcome back, <span id="student-name">Student</span>!</h1>
+                <p>Track your progress and continue your learning journey</p>
+            </section>
+
+            <section class="stats-grid">
+                <div class="stat-card" data-aos="fade-up">
+                    <div class="stat-icon">📊</div>
+                    <h3>Tests Completed</h3>
+                    <div class="stat-value" id="tests-completed">0</div>
+                    <div class="stat-change">+0 this week</div>
+                </div>
+
+                <div class="stat-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="stat-icon">🎯</div>
+                    <h3>Average Score</h3>
+                    <div class="stat-value" id="average-score">0%</div>
+                    <div class="stat-change">Keep practicing!</div>
+                </div>
+
+                <div class="stat-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="stat-icon">⏱️</div>
+                    <h3>Study Time</h3>
+                    <div class="stat-value" id="study-time">0h 0m</div>
+                    <div class="stat-change">Total time spent</div>
+                </div>
+
+                <div class="stat-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="stat-icon">📈</div>
+                    <h3>Current Streak</h3>
+                    <div class="stat-value" id="study-streak">0 days</div>
+                    <div class="stat-change">Stay consistent!</div>
+                </div>
+            </section>
+
+            <section class="charts-section">
+                <div class="chart-container">
+                    <div class="chart-card">
+                        <h3>Subject Performance</h3>
+                        <canvas id="subject-chart" width="400" height="200"></canvas>
+                    </div>
+                    <div class="chart-card">
+                        <h3>Progress Over Time</h3>
+                        <canvas id="progress-chart" width="400" height="200"></canvas>
+                    </div>
+                </div>
+            </section>
+
+            <section class="improvement-section">
+                <div class="improvement-card">
+                    <h3>Areas to Improve</h3>
+                    <div class="improvement-list" id="improvement-list">
+                        <!-- Dynamically populated -->
+                    </div>
+                    <button class="btn btn-outline" id="practice-weak-areas">Practice Weak Areas</button>
+                </div>
+
+                <div class="recent-activity">
+                    <h3>Recent Activity</h3>
+                    <div class="activity-list" id="activity-list">
+                        <!-- Dynamically populated -->
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script type="module" src="./src/scripts/main.mjs"></script>
+    <script type="module" src="./src/scripts/modules/dashboard.mjs"></script>
+</body>
+</html>
