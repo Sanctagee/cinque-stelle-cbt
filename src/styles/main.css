@@ -9,6 +9,7 @@
   --neutral-dark: #6C757D;
   --font-heading: 'Montserrat', sans-serif;
   --font-body: 'Source Sans Pro', sans-serif;
+  --bd-radius: 8px 0 8px 0;
 }
 
 * {
@@ -153,8 +154,6 @@ body {
 }
 
 
-
-
   .nav {
     display: flex;
     justify-content: space-between;
@@ -174,7 +173,7 @@ body {
         color: var(--neutral-light);
         background: var(--navy-blue);
         padding: 0.25rem 0.5rem;
-        border-radius: 4px;
+        /* border-radius: 4px; */
       }
 
       .brand-name {
@@ -244,6 +243,7 @@ body {
   background: url(/src/images/cinque-hero.jpg);
   gap: 3rem;
   align-items: center;
+  height: 100vh;
 
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
@@ -290,11 +290,13 @@ body {
         position: absolute;
         background: white;
         padding: 1.5rem;
-        border-radius: 12px;
+        border-radius: var(--bd-radius);
         box-shadow: 0 10px 30px rgba(0,0,0,0.1);
         font-weight: bold;
         color: var(--navy-blue);
         border: 2px solid var(--accent-yellow);
+        cursor: pointer;
+
 
         &[data-animation="float-1"] {
           top: 20%;
@@ -304,12 +306,12 @@ body {
 
         &[data-animation="float-2"] {
           top: 50%;
-          left: 50%;
+          left: 40%;
           animation: float 3s ease-in-out infinite 1s;
         }
 
         &[data-animation="float-3"] {
-          top: 30%;
+          top: 40%;
           right: 10%;
           animation: float 3s ease-in-out infinite 2s;
         }
@@ -319,12 +321,11 @@ body {
 }
 
 
-
 /* Buttons */
 .btn {
   padding: 0.75rem 1.5rem;
   border: none;
-  border-radius: 6px;
+  border-radius: var(--bd-radius);
   font-family: var(--font-heading);
   font-weight: 600;
   cursor: pointer;
@@ -387,7 +388,7 @@ body {
   .modal-content {
     background: white;
     padding: 2rem;
-    border-radius: 12px;
+    border-radius: 12px 0 12px 0;
     max-width: 400px;
     width: 90%;
     position: relative;
