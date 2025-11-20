@@ -151,7 +151,7 @@ export class Dashboard {
         });
     }
 
-    // ADD THIS NEW METHOD FOR MOTIVATIONAL QUOTES
+    // FOR MOTIVATIONAL QUOTES
     // In dashboard.mjs - update the loadMotivationalQuote method
     async loadMotivationalQuote() {
         try {
@@ -196,7 +196,7 @@ export class Dashboard {
         }
     }
 
-    // ADD THIS METHOD TO DISPLAY THE QUOTE
+    // TO DISPLAY THE QUOTE
     displayMotivationalQuote(quoteData) {
         const quoteHTML = `
             <div class="quote-widget">
@@ -206,7 +206,7 @@ export class Dashboard {
             </div>
         `;
         
-        // Add to dashboard header
+        // Added to dashboard header
         const dashboardHeader = document.querySelector('.dashboard-header');
         if (dashboardHeader) {
             dashboardHeader.insertAdjacentHTML('afterend', quoteHTML);
